@@ -22,6 +22,7 @@ public class LoginTest {
         }
 
     }
+    @Test (dependsOnMethods = {"logintest"})
     public void unlog(WebDriver driver) {
         try {
             WebElement passicon = driver.findElement(By.xpath("//span [@class='avatar__image-wrapper']"));

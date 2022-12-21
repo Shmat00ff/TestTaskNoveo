@@ -20,7 +20,7 @@ public class CurrencyTest {
             driver.get("https://www.moex.com/ru/issue/EUR_RUB__TOM/CETS");
             WebElement AcceptBt = driver.findElement(By.xpath("//div[@class='disclaimer__buttons'] //a [@role='button' and text()='Согласен']"));
             AcceptBt.click(); //Принятие условий МОСБиржы
-
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             WebElement expeur_element = driver.findElement(By.xpath("// ul [@class = 'mx-security-digest'] //li[@class='last'] //span"));
             WebElement difeur = driver.findElement(By.xpath("// ul [@class = 'mx-security-digest'] //li[@class='change'] //span"));
             String de = difeur.getText();
@@ -34,6 +34,7 @@ public class CurrencyTest {
             //Цена USD на МОСБирже
 
             driver.get("https://ya.ru");
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             WebElement eur_element = driver.findElement(By.cssSelector(".home-link2.informers3__stocks-item[title ='EUR MOEX']"));
             String act_eur = eur_element.getText();
             WebElement usd_element = driver.findElement(By.cssSelector(".home-link2.informers3__stocks-item[title ='USD MOEX']"));
