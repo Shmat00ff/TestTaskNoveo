@@ -18,7 +18,7 @@ public class WheatherTest {
         try {
             driver.get("https://ya.ru");
             String window1 = driver.getWindowHandle();
-            WebElement tempact = driver.findElement(By.xpath("//a [@data-statlog='informers.weather']"));
+            WebElement tempact = driver.findElement(By.xpath("//a [@class='home-link2 informers3__item informers3__weather home-link2_color_inherit home-link2_hover_red']"));
             String acttemp = tempact.getText();
             tempact.click();
             Set<String> currentWindows = driver.getWindowHandles();
