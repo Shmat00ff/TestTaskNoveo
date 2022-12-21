@@ -44,7 +44,7 @@ public class CurrencyTest {
             Assert.assertEquals(act_eur, "EUR  " + exp_eur + "  " + de);
 
             System.out.println(act_usd + " <---> USD  " + exp_usd + "  " + du);
-            System.out.println(act_eur + " <---> EUR   " + exp_eur + "  " + de);
+            System.out.println(act_eur + " <---> EUR  " + exp_eur + "  " + de);
 
 
         } catch (NumberFormatException e) {
