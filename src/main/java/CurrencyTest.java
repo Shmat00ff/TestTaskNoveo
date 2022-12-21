@@ -34,7 +34,6 @@ public class CurrencyTest {
             //Цена USD на МОСБирже
 
             driver.get("https://ya.ru");
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             WebElement eur_element = driver.findElement(By.cssSelector(".home-link2.informers3__stocks-item[title ='EUR MOEX']"));
             String act_eur = eur_element.getText();
             WebElement usd_element = driver.findElement(By.cssSelector(".home-link2.informers3__stocks-item[title ='USD MOEX']"));
